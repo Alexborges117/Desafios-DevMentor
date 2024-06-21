@@ -1,0 +1,273 @@
+/* ============= RESET CSS ================ */
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Para navegadores modernos */
+    -webkit-user-select: none; /* Para Safari */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para IE 10+ */
+}
+
+html {
+    color: #333;
+    font-family: 'Kanit', sans-serif;
+}
+/* ================================== */
+
+.compra{
+    display: none;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.hamburguer{
+    display: none;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: #ffffff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+ul li{
+    font-style: none;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0; 
+    margin: 0; 
+}
+
+.hamburguer{
+    cursor: pointer;
+}
+
+.hamburguer i.fa-bars::before {
+    content: "\f0c9"; 
+}
+  
+.hamburguer.open i.fa-bars::before {
+    content: "\f00d"; 
+}
+  
+
+.logo,
+.Compra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.logo{
+    margin-left: 30px;
+}
+.Compra{
+    width: 150px;
+    border-left: 1px solid #d4d4d4;
+    height: 70px;
+}
+
+.dualContent{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.oneContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+.conteudo h1, h2, h3, button{
+    margin-top: 20px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 300px;
+}
+
+button{
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #f7f7f7;
+}
+
+button h3 {
+    margin: 0; /* Remove a margem padrão dos <h3> */
+}
+
+.carrinho{
+    color: #fff;
+    background-color: #151110;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: 1s;
+}
+.details{
+    color: #fff;
+    background-color: #a4a4a4;
+    width: 120px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.details:hover, .carrinho:hover{
+    scale: 1.1;
+    transition: .5s;
+}
+
+.twoContent{
+    background-color: #74d3ff;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.twoContent img{
+    position: relative;
+    right: 100px;
+    top: 100px;
+}
+
+.text h1{
+    font-size: 64px;
+}
+
+.text h3{
+    font-size: 20px;
+}
+
+.text h2{
+    font-size: 32px;
+}
+/* Tablet */
+@media (max-width: 1026px){
+    body{
+        overflow-y: visible;
+    }
+    .dualContent{
+        flex-direction: column;
+    }
+    .oneContent,
+    .twoContent{
+        width: 100%;
+    }
+
+    .twoContent{
+        align-items: center;
+        justify-content: center;
+    }
+    .twoContent img{
+        width: 600px;
+        position: initial;
+    }
+}
+/* celular */
+@media (max-width: 600px){
+
+    ul.menu{
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        align-items: center;
+        z-index: 1;
+        height: 100vh;
+        font-size: 30px;
+        justify-content: center;
+    }
+
+    ul.menu li {
+        margin: 20px 0; 
+      }
+
+    ul.menu.show{
+        display: flex;
+    }
+
+    .hamburguer{
+        display: block;
+        width: 50px;
+    }
+
+    .Compra{
+        display: none;
+    }
+    .compra{
+        display: block;
+    }
+    
+    body.no-scroll {
+        overflow-y: hidden;
+      }      
+
+    button{
+        flex-direction: column;
+    }
+    .conteudo{
+        margin-top: 200px;
+    }
+    .conteudo h1{
+        font-size: 36px;
+    }
+    .details{
+        width: 200px;
+    }
+    .twoContent{
+        height: 50vh;
+    }
+    .twoContent img{
+        width: 300px;
+    }
+}
