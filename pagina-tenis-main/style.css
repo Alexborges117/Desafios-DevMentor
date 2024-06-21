@@ -247,10 +247,6 @@ button h3 {
     .compra{
         display: block;
     }
-    
-    body.no-scroll {
-        overflow-y: hidden;
-      }      
 
     button{
         flex-direction: column;
@@ -270,4 +266,9 @@ button h3 {
     .twoContent img{
         width: 300px;
     }
+
+    .twoContent.hidden {
+        display: none;
+    }
+  
 }
